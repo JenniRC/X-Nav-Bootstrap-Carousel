@@ -4,27 +4,163 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rediseño de la web de la ETSIT con Bootstrap</title>
-
+    <title>URJC</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Carousel extra styles -->
     <link rel="stylesheet" href="css/carousel.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+      <!-- Social buttons -->
+<!--    <link rel="stylesheet" href="css/social.css"> -->
+
   </head>
   <body>
-    <h1>Esto es un ejercicio para hacer una página para la ETSIT URJC con componentes de Boostrap.</h1>
+<!--Barra_Superior-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.urjc.es" target="_blank">URJC</a>
+          <a class="navbar-brand" href="https://github.com/JenniRC" target="_blank">GitHub</a>
+        </div>
 
-    <p>La página web ha de usar al menos:</p>
-    <ul>
-      <li>Un <i>carousel</i> (con su barra de navegación)</li>
-      <li>Al menos dos componentes más de Boostrap (a elección del alumno)</<li>
-      <li>Al menos un componente de <a href="http://www.bootsnipp.com">Bootsnipp</a></li>
-    </ul>
+        <!-- Boton con opciones inferiores -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="http://www.etsit.urjc.es/" target="_blank">ETSIT</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Información<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="http://www.etsit.urjc.es/estudios/index.html" target="_blank" >Estudios y titulaciones</a></li>
+                <li><a href="http://docencia.etsit.urjc.es/moodle/course/view.php?id=109" target="_blank">Portal de Docencia</a></li>
+                <li><a href="http://www.etsit.urjc.es/informacion_general/index.html" target="_blank">Información General</a></li>
+                <li class="divider"></li>
+                  <li><a href="http://www.etsit.urjc.es/alumnos/index.html" target="_blank">Alumnos</a></li>
+              </ul>
+            </li>
+          </ul>
 
+          <!--Boton para buscar-->
+          <form class="navbar-form navbar-right" role="search" action="http://googlemini.urjc.es/search" method='get'>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search" required name="q">
+            </div>
+            <button type="submit" class="btn btn-default">Buscar</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="images/portada1.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>ETSIT</h1>
+              <p>Escuela Técnica Superior de Ingeniería de Telecomunicación</p>
+              <p><a class="btn btn-lg btn-primary" href="http://docencia.etsit.urjc.es/moodle/login/index.php" role="button">Inicia sesión</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/urjc.png" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Todos los grados de la URJC</h1>
+              <p>Grados de las escuelas pertenecientes a la URJC</p>
+              <p><a class="btn btn-lg btn-primary" href="http://www.urjc.es/estudios" role="button">Información</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/portada2.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>GSyC</h1>
+              <p>Departamento de Sistemas Telemáticos y Computación.</p>
+              <p><a class="btn btn-lg btn-primary" href="http://gsyc.es" role="button">Ir a la página del GSyC</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/portada1.png" alt="Forth slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Parte de guerra</h1>
+              <p>Aqui puedes encontrar los pc's encendidos</p>
+              <p><a class="btn btn-lg btn-primary" href="http://labs.gsyc.es/parte/" target="_blank" role="button">Parte de guerra</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- /.carousel -->
+
+
+    <div class="container">
+      <strong>Where find us!</strong>
+      <div class="row-fluid">
+            <div class="span8">
+              <iframe width="100%" height="350" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3043.6753227491627!2d-3.82101!3d40.282962!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418e7adf68f543%3A0x841755428455a90b!2sUniversidad+Rey+Juan+Carlos!5e0!3m2!1ses!2ses!4v1423831564044"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- /.elemento bootsnip mapa -->
+    <div class="jumbotron">
+      <div class="container">
+        <img src="images/graciosa.jpg">
+        <h1>If you need help..</h1>
+        <p>Please, don't contact us, I think we are loose too!!.</p>
+          <a href="https://www.urjc.es/component/k2/1108-informacion-general" target="_blank" class="btn btn-primary" role="button">Click here!</a>
+      </div>
+    </div>
+
+<!-- ELEMENTO DE BOOTSNIP - MAPA
+    ================================================== -->
+    <!--Pulling Awesome Font -->
+<!--Elemento 2-->
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    60%
+  </div>
+  <span class="glyphicon glyphicon-heart" aria-hidden="true">           Love it!</span>
+</div>
+
+<div class="social">
+  <a <a href="https://www.facebook.com/" target="_blank"><img height="32" src="images/fb.png" title="Sígueme en fb" width="42" />    </a>
+  <a <a href="https://www.linkedin.com/" target="_blank"><img  height="32" src="images/lk.png" title="Sígueme en linked in" width="42" />    </a>
+  <a <a href="https://twitter.com/" target="_blank"><img height="32" src="images/twt.png" title="Sígueme en twiter" width="42" />   </a>
+</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
   </body>
 </html>
